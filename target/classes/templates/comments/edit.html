@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head-links"></head>
+<body>
+
+<div th:replace="fragments/header :: head-navbar"></div>
+
+<div id="edit-comment-form" class="container w-50">
+	<h1 class="display-4 text-center">Edit comment</h1>
+	<form th:action="@{/campgrounds/{id}/comments/{commentId}(id = ${campgroundId}, commentId = ${comment.id})}" th:object="${comment}" th:method="PUT">
+		<div class="form-group">
+			<label for="inputCommText">Comment text:</label>
+			<input maxlength="512" type="text" class="form-control" id="inputCommText" th:field="*{text}">
+		</div>		
+		<button type="submit" class="btn btn-primary btn-block my-4">Submit</button>
+	</form>
+	<a th:href="@{/campgrounds/{id}(id = ${campgroundId})}">Go Back</a>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

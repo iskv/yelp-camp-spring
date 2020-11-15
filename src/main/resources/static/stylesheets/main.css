@@ -1,0 +1,57 @@
+body {
+	font-family: "Nunito", sans-serif;
+}
+
+#mainNavbar {
+	font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar .nav-link:hover {
+    color: rgba(0,0,0,0.6);
+}
+
+#login-form {
+	min-width: 200px;
+}
+
+.message-block {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+    right: 25%;
+	left: 25%;
+	top: 30%;    
+	z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.message-block-small {
+	background-color: rgba(0,0,0,0.5);
+	text-align: center;
+	z-index: 10;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.background-opts {
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 100vh;
+}
+
+#slide1 {
+	background-image: url(http://i.imgur.com/K3mPv14.jpg);
+}
+
+#slide2 {
+	background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+}
+
+#slide3 {
+	background-image: url(http://i.imgur.com/emvhOnb.jpg);
+}

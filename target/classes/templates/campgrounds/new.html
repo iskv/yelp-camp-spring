@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head-links"></head>
+<body>
+
+<div th:replace="fragments/header :: head-navbar"></div>
+
+<div id="new-campground-form" class="container w-50">
+	<h1 class="display-4 text-center">Create a new Campground</h1>
+	<form th:action="@{/campgrounds}" th:object="${campground}" method="post">
+		<div class="form-group">
+			<label for="inputCampName">Campground name:</label>
+			<input type="text" class="form-control" id="inputCampName" th:field="*{name}">
+		</div>
+		<div class="form-group">
+			<label for="inputCampImg">Campground image url:</label>
+			<input type="url" class="form-control" id="inputCampImg" th:field="*{image}">
+		</div>
+		<div class="form-group">
+			<label for="inputCampDesc">Campground description:</label>
+			<input type="text" class="form-control" id="inputCampDesc" th:field="*{description}">
+		</div>
+		<div class="form-group">
+			<label for="inputCampPrice">Campground price per night:</label>
+			<input type="number" min="0" class="form-control" id="inputCampPrice" th:field="*{price}">
+		</div>
+		<button type="submit" class="btn btn-primary btn-block my-4">Submit</button>
+	</form>
+	<a href="/campgrounds">Go Back</a>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

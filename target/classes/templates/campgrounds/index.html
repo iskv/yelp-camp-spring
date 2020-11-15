@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head-links"></head>
+<body>
+
+<div th:replace="fragments/header :: head-navbar"></div>
+
+<div class="container">
+	
+	<div class="jumbotron">
+  		<h1 class="display-4">All our campgrounds!</h1>
+  		<p class="lead">View our hand-picked campgrounds from all over the world.</p>
+  		<hr class="my-4">
+  		<p>To add new campground or comment to an existing one - please register or login.</p>
+  		<a class="btn btn-primary btn-lg" href="/campgrounds/new" role="button">Add New Campground</a>
+	</div>
+	
+	<div class="row text-center" >
+
+			<div th:each="campground : ${allCampgrounds}" class="col-lg-3 col-md-4 col-sm-6">
+				<div class="card mb-2">
+					<img th:src="${campground.image}" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title" th:text="${campground.name}"></h5>
+    					<a th:href="@{/campgrounds/{id}(id = ${campground.id})}" class="btn btn-primary">More Info</a>
+					</div>
+				</div>
+			</div>
+
+	</div>
+
+		
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>
