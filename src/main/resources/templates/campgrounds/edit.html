@@ -10,11 +10,11 @@
 	<form th:action="@{/campgrounds/{id}(id = ${campground.id})}" th:object="${campground}" th:method="PUT">
 		<div class="form-group">
 			<label for="inputCampName">Campground name:</label>
-			<input type="text" class="form-control" id="inputCampName" th:field="*{name}">
+			<input type="text" class="form-control" id="inputCampName" th:field="*{name}" maxlength="255">
 		</div>
 		<div class="form-group">
 			<label for="inputCampImg">Campground image url:</label>
-			<input type="url" class="form-control" id="inputCampImg" th:field="*{image}">
+			<input type="url" class="form-control" id="inputCampImg" th:field="*{image}" maxlength="255">
 		</div>
 		<div class="form-group">
 			<label for="inputCampDesc">Campground description:</label>

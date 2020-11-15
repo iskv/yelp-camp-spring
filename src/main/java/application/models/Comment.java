@@ -9,7 +9,7 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(columnDefinition = "TEXT")
+    @Column(length = 510)
     private String text;
     private Date date;
     @ManyToOne
