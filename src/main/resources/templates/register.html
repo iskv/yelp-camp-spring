@@ -10,11 +10,11 @@
 	<form th:action="@{/register}" method="POST" th:object="${user}">
 		<div class="form-group">
 			<label for="inputUserName">User Name:</label>
-			<input type="text" class="form-control" id="inputUserName" th:field="*{username}">
+			<input type="text" class="form-control" id="inputUserName" th:field="*{username}" maxlength="255">
 		</div>
 		<div class="form-group">
 			<label for="inputPassword">Password:</label>
-			<input type="password" class="form-control" id="inputPassword" th:field="*{password}">
+			<input type="password" class="form-control" id="inputPassword" th:field="*{password}" maxlength="255">
 		</div>
 		<button type="submit" class="btn btn-primary btn-block mt-4">Submit</button>
 	</form>	
