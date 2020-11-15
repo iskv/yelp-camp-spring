@@ -9,6 +9,7 @@ Current functionality:
 * User authorization
 * Adding / editing / deleting user's campground
 * Adding / editing / deleting user's comment per campground
+* Flash messages
 
 # Technical Details
 
